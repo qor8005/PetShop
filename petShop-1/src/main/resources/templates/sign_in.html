@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/sign_In.css"/>
+</head>
+<script>
+	function gosign_Up(){
+		location.href = "sign_up";
+	}
+</script>
+<body>
+    <div class="login-wrapper">
+        <h2>Login</h2>
+		<form action="result.html" th:action="@{/sign_in}" th:object="${loginInput}" method="POST" id="login-form">
+			<table>
+				<tr>
+					<td><input type="text"  id="id" placeholder=" ID" th:field="*{id}"/></td>
+				</tr>
+				
+				<tr>
+					<td><input type="password"  id="pw" placeholder=" Password" th:field="*{password}"/></td>
+				</tr>
+			</table>
+			<button type="submit" id="btn">로그인</button>
+			<button type="button" id="btn" onclick="gosign_Up();">회원가입</button>
+		</form>
+		 
+	</div>
+	
+	<script>
+		var result= '[[${msg}]]';
+		console.log(result);
+		if(result === "Failed"){
+			alert("로그인 실패.");
+		}
+    </script>
+    
+</body>
+</html>

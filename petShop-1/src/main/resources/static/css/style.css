@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+*{margin: 0; padding: 0; font-family: 'Oswald', sans-serif;}
+
+/* 기본 글꼴 정리 */
+p{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul, li{
+    list-style: none;
+}
+
+header{
+    position:fixed;
+    display: flex;
+    width: 100%;
+    padding: 20px 150px 10px;
+    border-bottom: 1px solid rgba(14, 13, 13, 0.5);
+    z-index: 20;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: black;
+    color: #fff;
+}
+
+/* 애견샵 글자 */
+#wrap h1{
+	position:relative;
+    left: 48%;
+    font-size: 40px;
+}
+
+/* 전화번호 위치 */
+header .lift li p{
+    position:relative;
+    font-size: 20px;
+    margin-left: -800px;
+    color: #fff;
+}
+header ul li a{
+    font-size: 25px;
+    color: #fff;
+    z-index: 20;
+}
+
+/* 타이틀 링크 */
+#wrap .title_menu ul{
+	position:relative;
+	left: 160%;
+    display: flex;
+}
+#wrap .title_menu ul li{
+    margin-right: 60px;
+}
+
+
+#wrap .left ul{
+	position:relative;
+    display: flex;
+    right: 140%;
+}
+#wrap .left ul li{
+    margin-left: 60px;
+}
+
+/* ---------------------------------------스크롤---------------------------------------------- */
+
+.slide{
+    position: fixed;
+    left: 0px; top: 0px;
+    color: #fff;
+    width: 30%;
+    height: 33%;
+    padding: 50px;
+}
+
+.slide-content{
+    position: relative;
+    width: 111%;
+    margin: 0 auto;
+}
+
+.slide-content{
+    box-sizing: border-box;
+    padding-left: 35%;
+    padding-top: 0%;
+    color:blueviolet;
+    font-size: 20px;
+}
+.slide-content ul li{
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.slide-content .soild{
+    border: 1px solid #000;
+}
+
+.slide-content .button li a {
+    text-align: center;
+    border: 1px solid rgba(14, 13, 13, 0.5);
+    display: block;
+}
+
+.slide-content .button{
+    padding-top: 10px;
+}

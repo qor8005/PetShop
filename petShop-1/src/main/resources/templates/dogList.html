@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애견샵</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css?after7"/>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="title">애견샵</h1>
+            <div class="title_menu" th:if="${session.userInfo == null}">
+                <ul>
+                    <li><a href="./sign_in.html" th:href="@{/sign_in}"><b>장바구니</b></a></li>
+                    <li><a href="./sign_in.html" th:href="@{/sign_in}"><b>리뷰</b></a></li>
+                    <li><a href="./sign_in.html" th:href="@{/sign_in}"><b>로그인</b></a></li>
+                    <li><a href="./sign_up.html" th:href="@{/sign_up}"><b>회원가입</b></a></li>
+                </ul>
+            </div>
+            <div class="left" th:if="${session.userInfo == null}">
+                <ul>
+                	<li><p><b>연락처: 010-2999-XXXX</b></p></li>
+                    <li><a href="./kakaoMap.html" th:href="@{/kakaoMap}"><b>찾아오시는길</b></a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="title_menu" th:if="${session.userInfo != null}">
+                <ul>
+                    <li><a href="./confirm.html" th:href="@{/confirm}"><b>장바구니</b></a></li>
+                    <li><a href="./board/list.html" th:href="@{/board/list}"><b>리뷰</b></a></li>
+                    <li><a href="./sign_out.html" th:href="@{/sign_out}"><b>로그아웃</b></a></li>
+                    <li><a href="./sign_up.html" th:href="@{/sign_up}"><b>회원가입</b></a></li>
+                </ul>
+            </div>
+            <div class="left" th:if="${session.userInfo != null}">
+                <ul>
+                	<li><p><b>연락처: 010-2999-XXXX</b></p></li>
+                    <li><a href="./kakaoMap.html" th:href="@{/kakaoMap}"><b>찾아오시는길</b></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+
+	    <section class="slide slide1" data-0="top:10%; left:-9%;" data-400="top:-100%; left:-9%;">        
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[0].Photo}" alt="말티즈">
+	            <!--th:text="${board.customer.id}"-->
+	            <ul class="soild" id="aa">
+	                <li th:text="${dogList[0].dogBreed}"><p>견종: 말티즈</p></li>
+	                <li th:text="${dogList[0].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[0].gender}"><p>성별: 암컷</p></li>
+	                <li th:text="${dogList[0].price}"><p>가격: 1,100,000원</p></li>
+	                <li th:text="${dogList[0].inoculation}"><p>접종: 2차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[0].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section class="slide slide1-1" data-0="top:10%; left:25%;" data-400="top:-100%; left:25%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[1].Photo}" alt="시바이누">
+	            <ul class="soild">
+	                <li th:text="${dogList[1].dogBreed}"><p>견종: 시바이누</p></li>
+	                <li th:text="${dogList[1].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[1].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[1].price}"><p>가격: 300,000원</p></li>
+	                <li th:text="${dogList[1].inoculation}"><p>접종: 1차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[1].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section  class="slide slide1-2" data-0="top:10%; left:59%;" data-400="top:-100%; left:59%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[2].Photo}" alt="골든리트리버">
+	            <ul class="soild">
+	                <li th:text="${dogList[2].dogBreed}"><p>견종: 골든리트리버</p></li>
+	                <li th:text="${dogList[2].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[2].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[2].price}"><p>가격: 900,000원</p></li>
+	                <li th:text="${dogList[2].inoculation}"><p>접종: 2차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[2].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	
+	    <section class="slide slide2" data-50="top: 100%; left:-9%;" data-800="top:-100%; left:-9%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[3].Photo}" alt="푸들">
+	            <ul class="soild">
+	                <li th:text="${dogList[3].dogBreed}"><p>견종: 푸들</p></li>
+	                <li th:text="${dogList[3].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[3].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[3].price}"><p>가격: 250,000원</p></li>
+	                <li th:text="${dogList[3].inoculation}"><p>접종: 2차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[3].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section  class="slide slide2-1" data-50="top: 100%; left:25%;" data-800="top:-100%; left:25%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[4].Photo}" alt="시바이누">
+	            <ul class="soild">
+	                <li th:text="${dogList[4].dogBreed}"><p>견종: 시바이누</p></li>
+	                <li th:text="${dogList[4].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[4].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[4].price}"><p>가격: 800,000원</p></li>
+	                <li th:text="${dogList[4].inoculation}"><p>접종: 1차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[4].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section  class="slide slide2-2" data-50="top: 100%; left:59%;" data-800="top:-100%; left:59%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[5].Photo}" alt="보더콜리">
+	            <ul class="soild">
+	                <li th:text="${dogList[5].dogBreed}"><p>견종: 보더콜리</p></li>
+	                <li th:text="${dogList[5].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[5].gender}"><p>성별: 암컷</p></li>
+	                <li th:text="${dogList[5].price}"><p>가격: 2,700,000원</p></li>
+	                <li th:text="${dogList[5].inoculation}"><p>접종: 1차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[5].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	
+	    <section  class="slide slide3" data-100="top: 200%; left:-9%;" data-1100="top:-100%; left:-9%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[6].Photo}" alt="포메라니안">
+	            <ul class="soild">
+	                <li th:text="${dogList[6].dogBreed}"><p>견종: 포메라니안</p></li>
+	                <li th:text="${dogList[6].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[6].gender}"><p>성별: 암컷</p></li>
+	                <li th:text="${dogList[6].price}"><p>가격: 250,000원</p></li>
+	                <li th:text="${dogList[6].inoculation}"><p>접종: 2차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[6].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section  class="slide slide3-1" data-100="top: 200%; left:25%;" data-1100="top:-100%; left:25%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[7].Photo}" alt="닥스훈트">
+	            <ul class="soild">
+	                <li th:text="${dogList[7].dogBreed}"><p>견종: 닥스훈트</p></li>
+	                <li th:text="${dogList[7].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[7].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[7].price}"><p>가격: 800,000원</p></li>
+	                <li th:text="${dogList[7].inoculation}"><p>접종: 1차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[7].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	    <section  class="slide slide3-2" data-100="top: 200%; left:59%;" data-1100="top:-100%; left:59%;">
+	        <div class="slide-content">
+	            <img width="432" height="350" th:src="${dogList[8].Photo}" alt="사모예드">
+	            <ul class="soild">
+	                <li th:text="${dogList[8].dogBreed}"><p>견종: 사모예드</p></li>
+	                <li th:text="${dogList[8].age}"><p>나이: 2개월</p></li>
+	                <li th:text="${dogList[8].gender}"><p>성별: 수컷</p></li>
+	                <li th:text="${dogList[8].price}"><p>가격: 3,000,000원</p></li>
+	                <li th:text="${dogList[8].inoculation}"><p>접종: 1차접종</p></li>
+	            </ul>
+	            <ul class="button">
+	                <li><a href="./sign_in.html" th:href="@{/sign_in}" th:if="${session.userInfo == null}"><b>찜하기</b></a></li>
+	                <li><a href="./confirm.html" th:href="|/add?dogid=${dogList[8].dogid}|" th:if="${session.userInfo != null}"><b>찜하기</b></a></li>
+	            </ul>
+	        </div>
+	    </section>
+	<!--</form>-->
+
+    <section class="slide slide4" data-800="top: 100%; left:5%;" data-1000="top:20%; left:5%;">
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/DTq7xUozYqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section class="slide slide5" data-800="top: 100%; left:50%;" data-1000="top:20%; left:50%;">
+        <iframe width="650" height="400" src="https://www.youtube.com/embed/eMD3wfjJZyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+    
+    
+        var s = skrollr.init();
+        var text = document.querySelector('.text')
+
+        window.addEventListener("scroll", function () {
+            var wScroll = window.pageYOffset;
+            text.innerHTML = wScroll
+        })
+    </script>
+</body>
+</html>

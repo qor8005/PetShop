@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+	<title>카트확인</title>
+
+</head>
+
+<body>
+	<a href="./clear.html" th:href="@{/clear}">[카트비우기]</a>
+	<a href="./dogList.html" th:href="@{/}">[상품목록]</a>
+	
+	<table border="1">
+		<tr>
+			<th align="center" width="160">이미지</th>
+			<th align="center" width="160">구매자</th>
+			<th align="center" width="160">종류</th>
+			<th align="center" width="160">가격</th>
+			<th align="center" width="160">수량</th>
+			<th align="center" width="160">총금액</th>
+		</tr>
+		
+		<tr th:if="${#lists.isEmpty(bList)}">
+			<td colspan="2">
+				데이터가 없습니다!!!
+			</td>
+		</tr>
+		
+		<tr th:each="dogSet : ${bList}">
+			<td align="center" th:src="${dogSet.dog.Photo}"><img width="432" height="350" th:src="${dogSet.dog.Photo}"></td>
+			<td align="center" th:text="${dogSet.customer.id}">닉네임</td>
+			<td align="center" th:text="${dogSet.dog.dogBreed}">dogBreed</td>
+			<td align="center" th:text="${dogSet.dog.price}">가격</td>
+			<td align="center" th:text="${dogSet.num}">수량</td>
+			<td align="center" th:text="${dogSet.num * dogSet.dog.price}">수량</td>
+		</tr>
+	</table>
+    <div class="payment" th:if="${session.userInfo != null}">
+        <button onclick="location.href='/kakaoPay'">결제하기</button>
+    </div>
+	
+	<script>
+		var result= '[[${msg}]]';
+		
+		if(result === "SUCCESS"){
+			alert("처리가 완료되었습니다.");
+		}	
+        $('.payment').click(function(){
+            $ajax({
+            url : "/kakaopay.cls" ,
+            dataType : "json",
+            success : function(data){
+                alert(data); 
+            },
+                error:function(error){
+                alert(error);
+            }
+        });
+    });
+	</script>
+</body>
+</html>

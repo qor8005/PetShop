@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/address.css"/>
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+<div id="view">
+    <ul>
+        <li>카카오페이 결제가 정상적으로 완료되었습니다.</li>
+        <div th:each="i:${info}">
+        <li>결제일시:     [[${info.approved_at}]]</li>
+        <li>주문번호:    [[${info.partner_order_id}]]</li>
+        <li>상품명:    [[${info.item_name}]]</li>
+        <li>상품수량:    [[${info.quantity}]]</li>
+        <li>결제금액:    [[${info.amount.total}]]</li>
+        <li>결제방법:    [[${info.payment_method_type}]]</li>
+        </div>
+    </ul>
+</div>
+-->
+
+<table border="1">
+	<tr>
+		<th align="center" width="80">결제일시</th>
+		<th align="center" width="320">주문번호</th>
+		<th align="center" width="100">상품명</th>
+		<th align="center" width="180">상품수량</th>
+		<th align="center" width="180">결제금액</th>
+		<th align="center" width="180">결제방법</th>
+	</tr>
+	
+	<tr th:each="i:${info}">
+		<td align="center" th:text="${i.approved_at}">${i.approved_at}</td>
+		<td align="center" th:text="${i.partner_order_id}">${i.partner_order_id}</td>
+		<td align="center" th:text="${i.item_name}">${i.item_name}</td>
+		<td align="center" th:text="${i.quantity}">${i.quantity}</td>
+		<td align="center" th:text="${i.amount.total}">${i.amount.total}</td>
+		<td align="center" th:text="${i.payment_method_type}">${i.payment_method_type}</td>
+	</tr>
+</table>
+<button onclick="location.href='/'">돌아가기</button>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Board</title>
+</head>
+<body>
+	<h2>목록</h2>
+	<a href="register.html" th:href="@{register}">작성</a>
+	<table border="1">
+		<tr>
+			<th align="center" width="80">NO</th>
+			<th align="center" width="320">제목</th>
+			<th align="center" width="100">닉네임</th>
+			<th align="center" width="180">저장시간</th>
+		</tr>
+		
+		<tr th:if="${#lists.isEmpty(list)}">
+			<td colspan="4">
+				List is empty
+			</td>
+		</tr>
+		
+		<tr th:each="board : ${list}">
+			<td align="center"><a href="read.html" th:href="@{|read?bodid=${board.bodid}|}" th:text="${board.bodid}">${board.bodid}</a></td>
+			<td align="left" th:text="${board.title}">${board.title}</td>
+			<td align="right" th:if="${board.customer != null}" th:text="${board.customer.id}">${board.customer.id}</td>
+			<td align="center" th:text="${#temporals.format(board.dat, 'yyyy-MM-dd
+			HH:mm:ss')}">${board.dat}</td>
+		</tr>
+	</table>
+</body>
+</html>

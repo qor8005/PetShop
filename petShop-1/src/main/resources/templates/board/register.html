@@ -1,0 +1,48 @@
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Board</title>
+</head>
+
+<script src="/js/jquery-3.6.1.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		var formObj = $("#board");
+		
+		$("#btnRegister").on("click",function(){
+			formObj.attr("action","/board/register");
+			formObj.attr("method","post");
+			formObj.submit();
+		});
+		
+		$("#btnList").on("click",function(){
+			self.location = "/board/list";
+		});
+	});
+</script>
+
+<body>
+	<h2>REGISTER</h2>
+	
+	<form id="board" action="success.html" th:action="@{register}" th:object="${board}" method="POST">
+		<table>
+			<tr>
+				<td>제목</td>
+				<td><input type="text" name="제목" th:field="*{title}"/></td>
+			</tr>
+			<tr>
+				<td>내용</td>
+				<td><textarea name="내용" th:field="*{contents}"></textarea></td>
+			</tr>
+		</table>
+	</form>
+	
+	<div>
+		<button type="submit" id="btnRegister">저장</button>
+		<button type="submit" id="btnList">목록</button>
+	</div>
+</body>
+</html>

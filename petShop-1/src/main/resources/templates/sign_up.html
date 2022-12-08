@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
+</head>
+<body>
+    <div id="header">
+        <p>회원가입</p>
+    </div>
+    
+	<form action="result.html" th:action="@{/sign_up}" th:object="${customerForm}" method="POST">
+    	<!-- wrapper -->
+	    <div id="wrapper">
+	        <div id="content">
+	            <!-- id -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="id">아이디</label>
+	                </h3>
+	                <span class="box int_id">
+	                    <input type="text" id="id" class="int" maxlength="20" th:field="*{id}">
+	                </span>
+	                <span class="error_next_box e1">에러출력</span>
+	            </div><!-- id -->
+	
+	            <!-- pw1 -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="pswd1">비밀번호</label>
+	                </h3>
+	                <span class="box int_pass">
+	                    <input type="password" id="pswd1" class="int" maxlength="20">
+	                    <span id="alertTxt">사용불가</span>
+	                </span>
+	                <span class="error_next_box e2">에러출력</span>
+	            </div>
+	
+	            <!-- pw2 -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="pswd2">비밀번호 재확인</label>
+	                </h3>
+	                <span class="box int_pass_check">
+	                    <input type="password" id="pswd2" class="int" maxlength="20" th:field="*{password}">
+	                    <span id="alertTxt">사용불가</span>
+	                </span>
+	                <span class="error_next_box e3">에러출력</span>
+	            </div><!-- pw2 -->
+	
+	            <!-- name -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="name">이름</label>
+	                </h3>
+	                <span class="box int_name">
+	                    <input type="text" id="name" class="int" maxlength="20" th:field="*{name}">
+	                </span>
+	                <span class="error_next_box e4">에러출력</span>
+	            </div><!-- name -->
+	
+	            <!-- 생년월일 -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="yy">생년월일</label>
+	                </h3>
+	
+	                <div id="bir_wrap">
+	                    <!-- 생년 -->
+	                    <div id="bir_yy">
+	                        <span class="box">
+	                            <input name="yy" th:value="yy" type="text" id="yy" class="int" maxlength="4" placeholder="년(4)">
+	                        </span>
+	                    </div><!-- 생년 -->
+	
+	                    <!-- 생월 -->
+	                    <div id="bir_mm">
+	                        <span class="box">
+	                            <select id="mm" name="mm" class="sel">
+	                                <option>월</option>
+	                                <option th:value="01">1</option>
+	                                <option th:value="02">2</option>
+	                                <option th:value="03">3</option>
+	                                <option th:value="04">4</option>
+	                                <option th:value="05">5</option>
+	                                <option th:value="06">6</option>
+	                                <option th:value="07">7</option>
+	                                <option th:value="08">8</option>
+	                                <option th:value="09">9</option>
+	                                <option th:value="10">10</option>
+	                                <option th:value="11">11</option>
+	                                <option th:value="12">12</option>
+	                            </select>
+	                        </span>
+	                    </div><!-- 생월 -->
+	
+	                    <!-- 생일 -->
+	                    <div id="bir_dd">
+	                        <span class="box">
+	                            <input name="dd" th:value="dd" type="text" id="dd" class="int" maxlength="2" placeholder="일">
+	                        </span>
+	                    </div><!-- 생일 -->
+	                </div><!-- bir_wrap -->
+	                <span class="error_next_box e5"></span>
+	            </div><!-- 생년월일 -->
+	
+	            <!-- gender -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="gender" >성별</label>
+	                </h3>
+	                <span class="box gender_code">
+	                    <select id="gender" class="sel" th:name="gender">
+	                        <option>성별</option>
+	                        <option th:value="M">남자</option>
+	                        <option th:value="F">여자</option>
+	                    </select>
+	                </span>
+	                <span class="error_next_box e6">에러출력</span>
+	            </div><!-- gender -->
+	            
+	            <!-- email -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="email">본인확인 이메일
+	                        <span class="optional">(선택)</span>
+	                    </label>
+	                </h3>
+	                <span class="box int_email">
+	                    <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력" th:field="*{email}">
+	                </span>
+	                <span class="error_next_box e7">이메일 주소를 다시 확인해 주세요.</span>
+	            </div>
+	            <!-- email -->
+	
+	            <!-- mobile -->
+	            <div>
+	                <h3 class="join_title">
+	                    <label for="phoneno">휴대전화
+	                    </label>
+	                </h3>
+	                <span class="box int_mobile">
+	                    <input type="text" id="phoneno" class="int" maxlength="16" placeholder="전화번호 입력" th:field="*{pon}">
+	                </span>
+	                <span class="error_next_box e8">에러출력</span>
+	            </div>
+	            <!-- mobile -->
+	
+	            <!-- 버튼 -->
+	            <div class="btn_area">
+	                <button type="submit" id="btnJoin" onclick="checkSignUp();">
+	                        <span>가입하기</span>
+	                </button>
+	                <span class="error_next_box e9">에러출력</span>
+	            </div>
+	            <!-- 버튼 -->
+	
+	        </div><!-- content -->
+	    </div><!-- wrapper -->
+	</form>
+<script src="/js/main.js?ver=0.0.1"></script>
+</body>
+</html>
