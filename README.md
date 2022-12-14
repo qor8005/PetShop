@@ -7,5 +7,9 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=qor8005&custom_title=PetShop&exclude_repo=web,visual,Fund&layout=compact&theme=compact"/>
 
 ---
-### 사용방법
-> 
+
+### 1. 왜 이 프로젝트를 기획했나요?
+> 여러분의 애플리케이션이 무엇을 하는지,  여러분이 당면했던 문제나 나중에 추가하고 싶은 기능이 무엇인지
+
+### 2. 프로젝트 사용 방법
+> 프로젝트 실행 예시 화면의 스크린샷과 같은 시각 자료를 사용할 수도 있고
