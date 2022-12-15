@@ -24,11 +24,11 @@
 
 ### 3. 프로젝트 사용 방법
 
-* #### 메인페이  
+* #### 메인페이지  
 <img width="80%" src="https://user-images.githubusercontent.com/107646818/207816387-4ddf9ab5-910b-4483-be23-41161a0e2cb2.png"/>
 <img width="80%" src="https://user-images.githubusercontent.com/107646818/207816536-96f80430-c9a6-4555-bc2d-b660d633cfbe.png"/>
 
-* #### 찾아오시는   
+* #### 찾아오시는 길  
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207816650-b537d8cc-0052-4478-8612-76fc4002906f.png"/>
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207817329-756d7056-9a38-40f6-8d08-0495e1cb4c3f.png"/>
 
