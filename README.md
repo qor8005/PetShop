@@ -42,7 +42,6 @@
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818035-e9e4009c-d599-4c0d-8dcf-301af0dd9c86.png"/>
 
 * #### 배송지 입력  
-<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818252-d05ecc4b-c48d-4910-8cc6-1318fb165b81.png"/>
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818394-674ddba2-adad-4568-bb21-75dfcb00dece.png"/>
 
 * #### 카카오페이 결제  
