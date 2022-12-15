@@ -45,8 +45,8 @@
 <img width="70%" src="https://user-images.githubusercontent.com/107646818/207818394-674ddba2-adad-4568-bb21-75dfcb00dece.png"/>
 
 * #### 카카오페이 결제  
-<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818515-b956aae0-ef02-4e66-b206-060cf85db04c.png"/>
-<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818713-285aaa71-5c30-4e5e-b15b-0fb05463bf30.png"/>
+<img width="40%" height="500" src="https://user-images.githubusercontent.com/107646818/207818515-b956aae0-ef02-4e66-b206-060cf85db04c.png"/>
+<img width="40%" height="500" src="https://user-images.githubusercontent.com/107646818/207818713-285aaa71-5c30-4e5e-b15b-0fb05463bf30.png"/>
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818801-316fc618-5e85-41d0-b51d-19816f5bd766.png"/>
 
 * #### 리뷰  
