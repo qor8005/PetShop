@@ -33,10 +33,26 @@
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207817329-756d7056-9a38-40f6-8d08-0495e1cb4c3f.png"/>
 
 * #### 로그인  
-<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207817469-0379a4d4-808b-4e0e-bfea-886a2ad51eee.png"/>
+<img width="60%" height="400" src="https://user-images.githubusercontent.com/107646818/207817469-0379a4d4-808b-4e0e-bfea-886a2ad51eee.png"/>
 
 * #### 회원가입  
-<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207817689-50bc947a-0c8e-481a-a2c4-4b4bf01c8f4d.png"/>
+<img width="50%" height="700" src="https://user-images.githubusercontent.com/107646818/207817689-50bc947a-0c8e-481a-a2c4-4b4bf01c8f4d.png"/>
+
+* #### 장바구니  
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818035-e9e4009c-d599-4c0d-8dcf-301af0dd9c86.png"/>
+
+* #### 배송지 입력  
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818252-d05ecc4b-c48d-4910-8cc6-1318fb165b81.png"/>
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818394-674ddba2-adad-4568-bb21-75dfcb00dece.png"/>
+
+* #### 카카오페이 결제  
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818515-b956aae0-ef02-4e66-b206-060cf85db04c.png"/>
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818713-285aaa71-5c30-4e5e-b15b-0fb05463bf30.png"/>
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818801-316fc618-5e85-41d0-b51d-19816f5bd766.png"/>
+
+* #### 리뷰  
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818950-2f7bfb5d-9158-4e31-9e03-96bc62d5a0c3.png"/>
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207819081-629b9e5c-e80d-4359-bcf9-395cd2915b57.png"/>
 
 ### 4. 참고 자료
 * [카카오페이](https://developers.kakao.com/product/kakaoPay)  
