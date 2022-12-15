@@ -24,8 +24,19 @@
 
 ### 3. 프로젝트 사용 방법
 
+* #### 메인페이  
+<img width="80%" src="https://user-images.githubusercontent.com/107646818/207816387-4ddf9ab5-910b-4483-be23-41161a0e2cb2.png"/>
+<img width="80%" src="https://user-images.githubusercontent.com/107646818/207816536-96f80430-c9a6-4555-bc2d-b660d633cfbe.png"/>
+
+* #### 찾아오시는   
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207816650-b537d8cc-0052-4478-8612-76fc4002906f.png"/>
+<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207817329-756d7056-9a38-40f6-8d08-0495e1cb4c3f.png"/>
+
+* #### 로그인  
+<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207817469-0379a4d4-808b-4e0e-bfea-886a2ad51eee.png"/>
+
 * #### 회원가입  
-<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207574982-93d6fc6d-842b-4097-9c40-0098f90d382e.png"/>
+<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207817689-50bc947a-0c8e-481a-a2c4-4b4bf01c8f4d.png"/>
 
 ### 4. 참고 자료
 * [카카오페이](https://developers.kakao.com/product/kakaoPay)  
