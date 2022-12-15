@@ -51,7 +51,7 @@
 
 * #### 리뷰  
 <img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207818950-2f7bfb5d-9158-4e31-9e03-96bc62d5a0c3.png"/>
-<img width="90%" height="500" src="https://user-images.githubusercontent.com/107646818/207819081-629b9e5c-e80d-4359-bcf9-395cd2915b57.png"/>
+<img width="90%" src="https://user-images.githubusercontent.com/107646818/207819081-629b9e5c-e80d-4359-bcf9-395cd2915b57.png"/>
 
 ### 4. 참고 자료
 * [카카오페이](https://developers.kakao.com/product/kakaoPay)  
