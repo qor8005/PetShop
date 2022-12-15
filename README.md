@@ -14,18 +14,19 @@
 * oracle : 11.2.0.2.0
 * lombok : 1.18.24
 
-### 2. 왜 이 프로젝트를 기획했나요?
-> 
-
-### 3. 주요기능
+### 2. 주요기능
 * 회원가입 로그인 기능(artist, user의 2가지 타입이 있습니다.)
 * 지정펀딩과 미지정 펀딩 2가지의 방식으로 펀딩 글을 작성합니다.
 * 펀딩을 위한 결재 취소 환불 등의 기능이 있습니다.
 * 알림(댓글작성, 펀딩 달성, 마감, 취소 등의 상황에서 알림이 발송됩니다)
 * 유저, 아티스트의 개인 페이지(아티스트는 자신의 소개 페이지를 작성합니다)
 
-### 4. 프로젝트 사용 방법
-> 프로젝트 실행 예시 화면의 스크린샷과 같은 시각 자료를 사용할 수도 있고
+### 3. 프로젝트 사용 방법
 
-### 5. 참고 자료
-* [토스페이먼츠 개발자센터](https://docs.tosspayments.com/reference)  
+* #### 회원가입  
+<img width="60%" height="800" src="https://user-images.githubusercontent.com/107646818/207574982-93d6fc6d-842b-4097-9c40-0098f90d382e.png"/>
+
+### 4. 참고 자료
+* [카카오페이](https://developers.kakao.com/product/kakaoPay)  
+* [카카오 개발자](https://developers.kakao.com)  
+* [Daum 우편번호 서비스](https://postcode.map.daum.net/guide)  
